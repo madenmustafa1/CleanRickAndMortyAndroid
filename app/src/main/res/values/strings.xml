@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CleanRickAndMortyAndroid</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="try_again">Do you want to try again?</string>
+    <string name="error_data">Error when retrieving data!</string>
+    <string name="dislike_content">Dislike button</string>
+    <string name="like_content">Like button</string>
+    <string name="star_content">Start button</string>
+    <string name="character_photo">Character photo</string>
+    <string name="rick_and_morty_guide">Rick And Morty Guide</string>
+</resources>

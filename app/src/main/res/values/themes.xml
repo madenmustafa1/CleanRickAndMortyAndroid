@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CleanRickAndMortyAndroid" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#8294C4</item>
+
+    </style>
+
+    <style name="Theme.CleanRickAndMortyAndroid" parent="Base.Theme.CleanRickAndMortyAndroid" />
+</resources>

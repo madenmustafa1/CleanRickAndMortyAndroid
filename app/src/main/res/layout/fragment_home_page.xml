@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_color"
+    tools:context=".presentation.home_page.HomePageFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@color/white"
+            app:title="@string/rick_and_morty_guide" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_card"
+            app:cardCornerRadius="@dimen/default_radius"
+            app:strokeColor="@color/transparent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_page_card_height">
+
+                <!-- Character Photo -->
+                <ImageView
+                    android:id="@+id/characterPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/character_photo"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:background="@drawable/gradient_background"
+                    android:gravity="center|bottom"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_layout">
+
+                    <!-- Character Name -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/characterName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/padding_text"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/title"
+                        android:textStyle="bold" />
+
+                    <!-- Character Status -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/characterStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/padding_text"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content" />
+
+                    <!-- Character Last Known Location -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/characterLastKnownLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/padding_text"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="@dimen/like_layout_margin_horizontal"
+            android:layout_marginTop="@dimen/like_layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Dislike Button -->
+            <ImageView
+                android:id="@+id/dislikeButton"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:contentDescription="@string/dislike_content"
+                android:src="@drawable/dislike" />
+
+            <!-- Star Button -->
+            <ImageView
+                android:id="@+id/starButton"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:contentDescription="@string/star_content"
+                android:src="@drawable/star" />
+
+            <!-- Like Button -->
+            <ImageView
+                android:id="@+id/likeButton"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:contentDescription="@string/like_content"
+                android:src="@drawable/like" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/lottieAnimationLayout"
+        layout="@layout/lottie_animation_layout" />
+
+</FrameLayout>
+
