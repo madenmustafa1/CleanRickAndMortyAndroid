@@ -30,9 +30,6 @@ class HomePageFragment : Fragment(R.layout.fragment_home_page) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHomePageBinding.bind(view)
-
-        requireActivity().actionBar?.show()
-
         initViews()
         observeData()
         _homePageViewModel.getCharactersData()
